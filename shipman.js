@@ -85,7 +85,7 @@ window.addEventListener('keyup', e => {
             }
         });
         if((!word.includes(e.key) && !wrongGuesses.includes(e.key))){ // Punishment, but not double punishment
-            hangman[wrongGuesses.length]();
+            hangman[wrongGuesses.length - 1]();
             wrongGuesses.push(e.key);
             wrong.innerText = wrongGuesses.join(" ");
             if(wrongGuesses.length === hangman.length){    // Loss Conditions Met

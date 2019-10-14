@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="shipman.css">
+    <title>Trekman</title>
+</head>
+<body>
+    <div class="container">
+        <head>
+            <h1 class="text-center display-1">TrekMan</h1>
+            <p class="text-center display-5 text-muted">(It's like Hangman but with the word Trek instead, you see)</p>
+        </head>
+        <main>
+            <h2 id="word" class="text-center display-4">_ _ _ _</h2>
+            <p class="text-center text-muted display-5">Incorrect guesses so far:</p>
+            <p class="text-center text-muted display-5" id="wrong"></p>
+            <canvas class="mx-auto" width="300" height="150"></canvas>
+        </main>
+        <div>
+            <h2 id="victory" class="text-center my-5 d-none">MY GOD MAN, YOU'VE DONE IT!</h2>
+        </div>
+        <div class="text-center my-5">
+            <button class="btn btn-lg btn-info">Gimme a New Word</button>
+        </div>
+    </div>
+    <script src="shipman.js"></script>
+</body>
+</html>
