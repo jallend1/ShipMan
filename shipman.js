@@ -64,8 +64,10 @@ const reset = () => {
     wrongGuesses = [];
     console.log(word);
     wrong.innerText = "";
+    gameOver = false;
 }
 
+let gameOver = false;
 let word = "";
 let blankWord = "";
 let wrongGuesses = [];
@@ -79,12 +81,13 @@ window.addEventListener('keyup', e => {
                 wordDisplay.innerText = blankWord.join(" ").toUpperCase();     
             }
             if(!blankWord.includes("_")){       // Victory conditions
+                gameOver = true;
                 victory.innerText = "MY GOD MAN YOU'VE SAVED HIS LIFE";
                 victory.classList.remove("d-none");
                 button.innerText = "Wanna try to save another?";
             }
         });
-        if((!word.includes(e.key) && !wrongGuesses.includes(e.key))){ // Punishment, but not double punishment
+        if((!word.includes(e.key) && !wrongGuesses.includes(e.key) && !gameOver)){ // Punishment, but not double punishment
             hangman[wrongGuesses.length]();
             wrongGuesses.push(e.key);
             wrong.innerText = wrongGuesses.join(" ");
